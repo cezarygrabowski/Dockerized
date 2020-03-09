@@ -1,0 +1,13 @@
+version: '3'
+services:
+  angular:
+    build: AngularApp
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./AngularApp:/usr/src/app
+    environment:
+      NODE_ENV: development
+    command: /usr/src/app/entrypoint.sh
+volumes:
+  app:
